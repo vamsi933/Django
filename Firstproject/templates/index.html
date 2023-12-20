@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="text-align: center; background-color: purple; color: wheat;">
+        <form method="post" style="text-align: center;">
+            {% csrf_token %}
+            <label for="name">name :</label>
+            <input type="text" name="name"><br><br>
+            <label for="Headcoach">Headcoach :</label>
+            <input type="text" name="Headcoach"><br><br>
+            <label for="captain">captain :</label>
+            <input type="text" name="captain"><br><br>
+            <label for="no_of_Trophies">no_of_Trophies :</label>
+            <input type="text" name="no_of_Trophies"><br><br>
+            <input type="submit" value="submit" >
+        </form>
+    </div>
+
+        {% for i in data %}
+        <div>
+            <p>{{i.name}}</p>
+            <p>{{i.Headcoach}}</p>
+            <p>{{i.captain}}</p>
+            <p>{{i.no_of_Trophies}}</p>
+        
+        </div>
+        {% endfor %}
+</body>
+</html>
